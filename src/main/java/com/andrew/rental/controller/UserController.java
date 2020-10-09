@@ -18,9 +18,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private BankAccountService bankAccountService;
-
     @GetMapping
     public List<User> getUsers() {
         return userService.findAll();
@@ -41,8 +38,4 @@ public class UserController {
         userService.addUser(user);
     }
 
-    @PostMapping("/bank")
-    public void addBankAccount(@Validated @RequestBody BankAccount bankAccount) {
-        bankAccountService.addBankAccount(bankAccount);
-    }
 }

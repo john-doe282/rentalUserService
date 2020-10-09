@@ -7,6 +7,4 @@ import java.util.UUID;
 
 public interface BankAccountService {
     List<BankAccount> getBankAccountByUserId(UUID userId);
-
-    void addBankAccount(BankAccount bankAccount);
 }
