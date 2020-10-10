@@ -23,6 +23,5 @@ public class BankAccount {
     private int balance;
 
     @NonNull
-    @JsonIgnore
     private UUID userId;
 }
