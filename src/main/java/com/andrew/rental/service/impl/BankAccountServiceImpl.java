@@ -14,7 +14,7 @@ import java.util.UUID;
 
 @Service
 public class BankAccountServiceImpl implements BankAccountService {
-    private final String baseUrl = "http://localhost:8050/bank";
+    private final String baseUrl = System.getenv("BANK_URL") + ":8081/bank";
     private final RestTemplate restTemplate = new RestTemplate();
 
     @Override
