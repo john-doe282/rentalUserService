@@ -4,9 +4,7 @@ import com.andrew.rental.AddUserRequest;
 import com.andrew.rental.UsersShort;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.google.protobuf.Timestamp;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -18,8 +16,9 @@ import java.util.UUID;
 @Entity
 @Table(name = "user_info")
 @Data
-@RequiredArgsConstructor
+@AllArgsConstructor
 @DynamicUpdate
+@NoArgsConstructor
 @Builder
 public class User {
     @Id

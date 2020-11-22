@@ -14,6 +14,7 @@ import com.andrew.rental.model.User;
 import com.andrew.rental.service.UserService;
 import io.grpc.stub.StreamObserver;
 import javassist.NotFoundException;
+import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -21,6 +22,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@GRpcService
 public class GrpcUserController extends UserServiceGrpc.UserServiceImplBase {
     @Autowired
     private UserService userService;
