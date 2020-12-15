@@ -35,7 +35,7 @@ public class MqttConfig {
     }
 
     private void subscribe(IMqttClient client) throws MqttException {
-        client.subscribe("r/rent");
+        client.subscribe("r/user");
 //        client.subscribe("what");
 //        client.subscribe("s/user/short");
 //        client.subscribe("s/bank");
